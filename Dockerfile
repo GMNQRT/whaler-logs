@@ -9,9 +9,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Add and install Gemfile
-COPY Gemfile /usr/src/app/
-COPY Gemfile.lock /usr/src/app/
-RUN bundle install
+COPY Gemfile /usr/src/app/Gemfile
+COPY Gemfile.lock /usr/src/app/Gemfile.lock
+# RUN bundle install
 
 # Add source code
 COPY . /usr/src/app
